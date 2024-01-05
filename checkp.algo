@@ -1,0 +1,27 @@
+ ALGORITHM checkPoint1
+VAR
+      str : STRING
+    NB_C , NB_V : INTEGER := 0
+    NB_W: INTEGER := 1
+    i : INTEGER
+BEGIN
+        Write("write a sentence")
+    Read(str)
+
+    WHILE (str(i) <> ".") DO
+        
+        NB_C = NB_C + 1
+
+        IF (str(i) == ("a" , "e" , "i" , "y" , "u" , "o") ) THEN
+            NB_V = NB_V +1
+        END_IF
+
+        IF (str(i) = " ") THEN
+            NB_W = NB_W +1
+        END_IF     
+        i++
+    END_WHILE
+    Write(NB_W)
+    Write(NB_C)
+    Write(NB_V)
+END
